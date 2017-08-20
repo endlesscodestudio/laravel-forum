@@ -9,7 +9,10 @@
                     <div class="panel-body">
                         @foreach($threads as $thread)
                             <article>
-                                <h3><a href="threads/{{$thread->id}}">{{$thread->title}}</a></h3>
+                                <h4>
+                                    <a href="threads/{{$thread->id}}">{{$thread->title}}</a>
+                                    <span class="badge">{{count($thread->replies)}} replies</span>
+                                </h4>
                                 <div class="body">{{$thread->body}}</div>
                             </article>
                             <hr>

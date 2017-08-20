@@ -5,13 +5,22 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading"><h1>{{$thread->title}}</h1></div>
+                    <div class="panel-heading">
+                        <a href="">
+                            {{$thread->creator->name}}
+                        </a>
+                        posted:
+                        <h4><strong>{{$thread->title}}</strong></h4>
+                    </div>
                     <div class="panel-body">
                         <div class="body">{{$thread->body}}</div>
                     </div>
                 </div>
             </div>
         </div>
+
+        @include('threads.reply_form')
+
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
@@ -20,12 +29,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 @foreach($thread->replies as $reply)
-                                    <div class="panel panel-default ">
-                                        <div class="panel-heading">{{$reply->created_at->diffForHumans()}}</div>
-                                        <div class="panel-body bg-warning">
-                                            <div class="body">{{$reply->body}}</div>
-                                        </div>
-                                    </div>
+                                    @include('threads.replies')
                                 @endforeach
                             </div>
                         </div>
