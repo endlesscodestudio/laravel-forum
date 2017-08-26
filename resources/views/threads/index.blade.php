@@ -10,7 +10,8 @@
                         @foreach($threads as $thread)
                             <article>
                                 <h4>
-                                    <a href="threads/{{$thread->id}}">{{$thread->title}}</a>
+                                    <a href="/threads/{{$thread->channel->slug}}/{{$thread->id}}">{{$thread->title}}</a>
+                                    <span class="badge">{{$thread->channel->slug}}</span>
                                     <span class="badge">{{count($thread->replies)}} replies</span>
                                 </h4>
                                 <div class="body">{{$thread->body}}</div>

@@ -6,6 +6,7 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-heading">
+                        <h5><strong>Channel {{$channel}}</strong></h5>
                         <a href="">
                             {{$thread->creator->name}}
                         </a>
