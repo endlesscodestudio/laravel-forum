@@ -52,10 +52,11 @@ $factory->define(App\Reply::class, function (Faker\Generator $faker) {
 });
 
 $factory->define(App\Channel::class, function (Faker\Generator $faker) {
+    $name = $faker->word;
 
     return [
-        'name' => $faker->word,
-        'slug' => $faker->word,
+        'name' => $name,
+        'slug' => $name,
     ];
 
 });
