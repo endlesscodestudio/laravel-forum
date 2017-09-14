@@ -27,4 +27,9 @@ Route::post('/threads', 'ThreadsController@store');
 
 /** Replies */
 Route::post('/threads/{thread}/replies', 'RepliesController@store');
+Route::post('threads/{reply}/favorites', 'FavoritesController@store');
 /** ./Replies */
+
+/** UsersProfile */
+Route::get('/profile/{user}', 'ProfilesController@show')->name('profile');
+/** /.UsersProfile */

@@ -7,7 +7,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h5><strong>Channel {{$thread->channel->name}}</strong></h5>
-                        <a href="">
+                        <a href="/profile/{{$thread->creator->name}}">
                             {{$thread->creator->name}}
                         </a>
                         posted:

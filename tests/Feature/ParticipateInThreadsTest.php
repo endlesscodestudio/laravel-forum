@@ -14,7 +14,7 @@ class ParticipateInThreadsTest extends TestCase
 
     /** @test */
 
-    public function unauthentucated_users_may_not_add_replies()
+    public function unauthenticated_users_may_not_add_replies()
     {
         $this->withExceptionHandling()
             ->post('/threads/1/replies', [])

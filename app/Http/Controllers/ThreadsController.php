@@ -75,7 +75,6 @@ class ThreadsController extends Controller
         if ($channel->exists) {
             $threads->where('channel_id', $channel->id);
         }
-//        dd($threads->toSql());
 
         $threads = $threads->get();
         return $threads;

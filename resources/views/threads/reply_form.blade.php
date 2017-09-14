@@ -6,7 +6,7 @@
                 {{csrf_field()}}
                 <div class="form-group">
                             <textarea name="body" id="body" placeholder="Leave a comment!"
-                                      class="form-control" rows="5"></textarea>
+                                      class="form-control" rows="3"></textarea>
                 </div>
                 <button type="submit" class="btn btn-default pull-right">Post</button>
             </form>
